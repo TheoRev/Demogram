@@ -3,4 +3,13 @@
     <string name="hint_username">Username</string>
     <string name="hint_password">Password</string>
     <string name="text_button_login">LOGIN</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_user">User</string>
+    <string name="hint_confirm_password">Confirma Password</string>
+    <string name="text_button_createaccount">Join Us</string>
+    <string name="toolbar_title_createaccount">Create Account</string>
+    <string name="firstword_card">Hace</string>
+    <string name="timecard_card">4 días</string>
+    <string name="likenumbercard_card">10 Me Gusta</string>
 </resources>
