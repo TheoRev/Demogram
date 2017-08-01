@@ -17,8 +17,9 @@
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="@color/colorPrimary">
+
+            <!-- android:layout_scrollFlags="scroll|exitUntilCollapsed" -->
 
             <ImageView
                 android:id="@+id/imageHeader"

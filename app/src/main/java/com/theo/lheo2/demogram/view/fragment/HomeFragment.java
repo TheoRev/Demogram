@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
         ArrayList<Picture> pictures = new ArrayList<>();
         pictures.add(new Picture("http://diariouno.pe/wp-content/uploads/2015/10/3914.jpg", "Theo Revilla", "4 días", "3 Me Gusta"));
         pictures.add(new Picture("https://i.ytimg.com/vi/aqlKYruUXC8/hqdefault.jpg", "Almendra Cárdenas", "3 días", "6 Me Gusta"));
-        pictures.add(new Picture("http://4.bp.blogspot.com/_m-K6wUKJ51s/S_mYxnw-DYI/AAAAAAAAAD0/9hOAxjjjLWo/s1600/kapawi3gv1.jpg", "Noelia Amésquita", "7 días", "5 Me Gusta"));
+        pictures.add(new Picture("http://4.bp.blogspot.com/_m-K6wUKJ51s/S_mYxnw-DYI/AAAAAAAAAD0/9hOAxjjjLWo/s1600/kapawi3gv1.jpg", "Gabriela Carpio", "7 días", "5 Me Gusta"));
         return pictures;
     }
 
