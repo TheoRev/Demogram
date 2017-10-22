@@ -25,4 +25,5 @@
     <string name="secondword_detail">Me Gusta</string>
     <string name="titleimagedetail">\'Machupichu\'</string>
     <string name="machupichu_info">Machu Picchu («Montaña Vieja») es el nombre contemporáneo que se da a una llaqta —antiguo poblado andino— incaica construida antes del siglo XV en el promontorio rocoso que une las montañas Machu Picchu y Huayna Picchu en la vertiente oriental de la cordillera Central, al sur del Perú y a 2490 msnm, altitud de su plaza principal. Su nombre original habría sido Llaqtapata.</string>
+    <string name="transitionname_picture">transitionname_picture</string>
 </resources>

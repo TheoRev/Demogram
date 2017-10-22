@@ -1,7 +1,11 @@
 package com.theo.lheo2.demogram.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Build;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Explode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +15,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.theo.lheo2.demogram.R;
 import com.theo.lheo2.demogram.model.Picture;
+import com.theo.lheo2.demogram.view.PictureDetailActivity;
 
 import java.util.ArrayList;
 
@@ -39,6 +44,25 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
         holder.timeCard.setText(picture.getTime());
         holder.likeNumberCard.setText(picture.getLike_number());
         Picasso.with(activity).load(picture.getPicture()).into(holder.pictureCard);
+
+        holder.pictureCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity, PictureDetailActivity.class);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    Explode explode = new Explode();
+                    explode.setDuration(1000);
+                    activity.getWindow().setExitTransition(explode);
+                    activity.startActivity(intent, ActivityOptionsCompat.makeSceneTransitionAnimation(
+                            activity,
+                            view,
+                            activity.getString(R.string.transitionname_picture)).toBundle()
+                    );
+                } else {
+                    activity.startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
