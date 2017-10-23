@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.theo.lheo2.demogram.view.fragment.HomeFragment">
+    tools:context="com.theo.lheo2.demogram.post.view.HomeFragment">
 
     <include layout="@layout/actionbar_toolbar" />
 
@@ -23,10 +23,11 @@
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fabCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@drawable/plus" />
+        android:src="@drawable/plus" />
+
 </android.support.design.widget.CoordinatorLayout>

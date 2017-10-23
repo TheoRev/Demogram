@@ -8,7 +8,7 @@ import android.os.Bundle;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.theo.lheo2.demogram.R;
-import com.theo.lheo2.demogram.view.fragment.HomeFragment;
+import com.theo.lheo2.demogram.post.view.HomeFragment;
 import com.theo.lheo2.demogram.view.fragment.ProfileFragment;
 import com.theo.lheo2.demogram.view.fragment.SearchFragment;
 

@@ -3,6 +3,11 @@
     package="com.theo.lheo2.demogram">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        <activity android:name=".login.view.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,17 +25,18 @@
         </activity>
         <activity
             android:name=".view.CreateAccountActivity"
-            android:parentActivityName=".LoginActivity">
+            android:parentActivityName=".login.view.LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity" />
+                android:value=".login.view.LoginActivity" />
         </activity>
         <activity
             android:name=".ReferenciaActivity"
             android:label="@string/title_activity_referencia"
             android:theme="@style/AppTheme" />
         <activity android:name=".view.ContainerActivity" />
-        <activity android:name=".view.PictureDetailActivity"></activity>
+        <activity android:name=".view.PictureDetailActivity" />
+        <activity android:name=".post.view.NewPostActivity"></activity>
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.theo.lheo2.demogram.LoginActivity">
+    tools:context="com.theo.lheo2.demogram.login.view.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -95,6 +95,12 @@
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/textsize_donthaveaccount"
                         android:textStyle="bold" />
+
+                    <ProgressBar
+                        android:id="@+id/progressbarLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
                 </RelativeLayout>
             </LinearLayout>
         </ScrollView>
