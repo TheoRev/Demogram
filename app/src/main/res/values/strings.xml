@@ -31,4 +31,7 @@
     <string name="hint_title">Título</string>
     <string name="hint_escription">Descripción</string>
     <string name="text_button_createpost">Crear Post</string>
+
+    <string name="facebook_app_id">316022018874159</string>
+    <string name="fb_login_protocol_scheme">fb316022018874159</string>
 </resources>

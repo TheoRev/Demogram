@@ -1,5 +1,8 @@
 package com.theo.lheo2.demogram.login.interactor;
 
+import android.app.Activity;
+
+import com.google.firebase.auth.FirebaseAuth;
 import com.theo.lheo2.demogram.login.presenter.LoginPresenter;
 import com.theo.lheo2.demogram.login.repository.LoginRepository;
 import com.theo.lheo2.demogram.login.repository.LoginRepositoryImpl;
@@ -19,7 +22,7 @@ public class LoginInteractorImpl implements LoginInteractor {
     }
 
     @Override
-    public void signIn(String username, String passwors) {
-        repository.signIn(username, passwors);
+    public void signIn(String username, String passwors, Activity activity, FirebaseAuth firebaseAuth) {
+        repository.signIn(username, passwors, activity, firebaseAuth);
     }
 }
