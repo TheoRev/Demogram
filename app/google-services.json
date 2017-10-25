@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "305037891985",
+    "firebase_url": "https://demogram-1637b.firebaseio.com",
+    "project_id": "demogram-1637b",
+    "storage_bucket": "demogram-1637b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:305037891985:android:bf13cdb47b40c902",
+        "android_client_info": {
+          "package_name": "com.theo.lheo2.demogram"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "305037891985-12qse787oo579efba1nnkokhnbs7rm3p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theo.lheo2.demogram",
+            "certificate_hash": "a9e3df58bdfa5260a7f42e5687827d1a7fddfc82"
+          }
+        },
+        {
+          "client_id": "305037891985-t8hv5iellvp99flea7t8kodhh5ngts99.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbYlyxIPfGGQ82EJ5mxXGJ3V68UBp-3sk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "305037891985-t8hv5iellvp99flea7t8kodhh5ngts99.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
