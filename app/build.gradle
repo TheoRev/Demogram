@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.theo.lheo2.demogram"
         minSdkVersion 21
@@ -39,6 +39,7 @@ dependencies {
     compile 'com.zoonref:simple-view-behavior:1.0'
     compile 'com.google.firebase:firebase-auth:11.0.4'
     compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+    compile 'com.google.firebase:firebase-storage:11.0.4'
     testCompile 'junit:junit:4.12'
 }
 

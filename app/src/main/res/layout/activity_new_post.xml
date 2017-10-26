@@ -6,8 +6,6 @@
     android:fitsSystemWindows="true"
     tools:context="com.theo.lheo2.demogram.post.view.NewPostActivity">
 
-    <include layout="@layout/actionbar_toolbar" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

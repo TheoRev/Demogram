@@ -9,17 +9,19 @@
     <string name="hint_confirm_password">Confirma Password</string>
     <string name="text_button_createaccount">Join Us</string>
     <string name="toolbar_title_createaccount">Create Account</string>
-    <string name="firstword_card">Hace</string>
-    <string name="timecard_card">4 días</string>
+    <string name="firstword_card">Ago</string>
+    <string name="timecard_card">4 days</string>
     <string name="likenumbercard_card">10 Me Gusta</string>
     <string name="tab_search">Search</string>
     <string name="tab_home">Home</string>
     <string name="tab_profile">Me</string>
-    <string name="secondword_detail">Me Gusta</string>
+    <string name="secondword_detail">I Liked</string>
     <string name="machupichu_info">Machu Picchu («Montaña Vieja») es el nombre contemporáneo que se da a una llaqta —antiguo poblado andino— incaica construida antes del siglo XV en el promontorio rocoso que une las montañas Machu Picchu y Huayna Picchu en la vertiente oriental de la cordillera Central, al sur del Perú y a 2490 msnm, altitud de su plaza principal. Su nombre original habría sido Llaqtapata.</string>
 
     <string name="login_error">Something happen: </string>
-    <string name="hint_title">Título</string>
-    <string name="hint_escription">Descripción</string>
-    <string name="text_button_createpost">Crear Post</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_escription">Description</string>
+    <string name="text_button_createpost">Create Post</string>
+    <string name="menu_signout">Sign Out</string>
+    <string name="menu_about">About</string>
 </resources>

@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.theo.lheo2.demogram.R;
 import com.theo.lheo2.demogram.model.Picture;
-import com.theo.lheo2.demogram.view.PictureDetailActivity;
+import com.theo.lheo2.demogram.post.view.PictureDetailActivity;
 
 import java.util.ArrayList;
 

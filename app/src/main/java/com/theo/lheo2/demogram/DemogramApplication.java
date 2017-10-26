@@ -6,6 +6,8 @@ import android.util.Log;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 /**
  * Created by theo on 24/10/17.
@@ -16,6 +18,7 @@ public class DemogramApplication extends Application {
     public static final String TAG = "DemogramApplication";
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
+    private FirebaseStorage firebaseStorage;
 
     @Override
     public void onCreate() {
@@ -33,5 +36,12 @@ public class DemogramApplication extends Application {
                 }
             }
         };
+
+        firebaseStorage = FirebaseStorage.getInstance();
+
+    }
+
+    public StorageReference getStorageReference() {
+        return firebaseStorage.getReference();
     }
 }
