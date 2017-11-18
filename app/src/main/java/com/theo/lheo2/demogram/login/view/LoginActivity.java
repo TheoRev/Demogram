@@ -27,6 +27,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FacebookAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.crash.FirebaseCrash;
 import com.theo.lheo2.demogram.R;
 import com.theo.lheo2.demogram.login.presenter.LoginPresenter;
 import com.theo.lheo2.demogram.login.presenter.LoginPresenterImpl;
@@ -109,6 +110,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
             public void onError(FacebookException error) {
                 Log.w(TAG, "Facebook Login Error: " + error.toString());
                 error.printStackTrace();
+                FirebaseCrash.report(error);
             }
         });
     }
@@ -126,8 +128,10 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
                     editor.putString("email", user.getEmail());
                     editor.commit();
                     goHome();
+                    FirebaseCrash.logcat(Log.WARN, TAG, "Login Facebook Exitoso");
                     Toast.makeText(LoginActivity.this, "Login Facebook Exitoso", Toast.LENGTH_SHORT).show();
                 } else {
+                    FirebaseCrash.logcat(Log.WARN, TAG, "Login Facebook NO Exitoso");
                     Toast.makeText(LoginActivity.this, "Login Facebook No Exitoso", Toast.LENGTH_SHORT).show();
                 }
             }

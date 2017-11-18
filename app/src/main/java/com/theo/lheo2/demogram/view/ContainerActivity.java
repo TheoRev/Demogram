@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.crash.FirebaseCrash;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.theo.lheo2.demogram.R;
@@ -32,6 +33,7 @@ public class ContainerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseCrash.log("Iniciando " + TAG);
         setContentView(R.layout.activity_container);
 
         firebaseInitialize();

@@ -18,8 +18,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
+import com.google.firebase.crash.FirebaseCrash;
 import com.theo.lheo2.demogram.R;
 import com.theo.lheo2.demogram.adapter.PictureAdapterRecyclerView;
 import com.theo.lheo2.demogram.model.Picture;
@@ -46,6 +46,7 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        FirebaseCrash.report(new Exception("Reporte desde HomeFragment"));
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         showToolbar(getResources().getString(R.string.tab_home), false, view);
@@ -78,7 +79,8 @@ public class HomeFragment extends Fragment {
                 photoFile = createImageFile();
             } catch (Exception e) {
                 e.printStackTrace();
-                Toast.makeText(null, "ERROR: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(null, "ERROR: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                FirebaseCrash.report(e);
             }
 
             if (photoFile != null) {

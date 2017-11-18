@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.crash.FirebaseCrash;
 import com.theo.lheo2.demogram.login.presenter.LoginPresenter;
 
 /**
@@ -18,6 +20,7 @@ import com.theo.lheo2.demogram.login.presenter.LoginPresenter;
 
 public class LoginRepositoryImpl implements LoginRepository {
 
+    private static final String TAG = "LoginRepositoryImpl";
     LoginPresenter presenter;
 
     public LoginRepositoryImpl(LoginPresenter presenter) {
@@ -38,8 +41,10 @@ public class LoginRepositoryImpl implements LoginRepository {
                             SharedPreferences.Editor editor = preferences.edit();
                             editor.putString("email", user.getEmail());
                             editor.commit();
+                            FirebaseCrash.logcat(Log.WARN, TAG, "Usuario logeado " + user.getEmail());
                             presenter.loginSuccess();
                         } else {
+                            FirebaseCrash.logcat(Log.WARN, TAG, "Ocurrio un error");
                             presenter.loginError("Ocurrio un error");
                         }
                     }

@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.crash.FirebaseCrash;
 import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 import com.theo.lheo2.demogram.DemogramApplication;
@@ -20,6 +21,7 @@ import com.theo.lheo2.demogram.R;
 
 public class PictureDetailActivity extends AppCompatActivity {
 
+    private static final String TAG = "PictureDetailActivity";
     private static final String PHOTO_NAME = "JPEG_20171025_23-40-04_261169432.jpg";
     private ImageView imageHeader;
     private DemogramApplication app;
@@ -28,6 +30,7 @@ public class PictureDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseCrash.log("Iniciando " + TAG);
         setContentView(R.layout.activity_picture_detail);
 
         app = (DemogramApplication) getApplicationContext();
@@ -55,6 +58,7 @@ public class PictureDetailActivity extends AppCompatActivity {
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(PictureDetailActivity.this, "Ocurrió un error al traer la foto", Toast.LENGTH_SHORT).show();
                 e.printStackTrace();
+                FirebaseCrash.report(e);
             }
         });
     }
